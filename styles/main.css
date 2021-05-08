@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(5, 12, 36);
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.container  {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-icon-wrapper {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.nav-icon {
+    width: 30px;
+    height: 5px;
+    background-color: #ce1b1b;
+    position: relative; 
+}
+
+
+.nav-icon::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: -10px;
+    left: 0;
+
+    width: 30px;
+    height: 5px;
+    background-color: #ce1b1b;
+
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.nav-icon::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    width: 30px;
+    height: 5px;
+    background-color: #ce1b1b;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+
+
+    
+
+/*active state */
+.nav-icon.active {
+    background-color: transparent;
+}
+
+.nav-icon.active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    background-color: #dfd118;
+}
+
+.nav-icon.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    background-color: #dfd118;
+}
+
+.square-wrapper {
+    margin-right: 30px;
+}
+
+.square {
+    background-color: #37c91a;
+    width: 30px;
+    height: 30px;
+    transition: .2s ease-in;
+}
+
+.rotated {
+    background-color: #0b6fe2;
+    width: 30px;
+    height: 30px;
+    transform: rotate(+90deg);
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(218, 132, 20);
+    transition: .2s ease-in;
+}
+
+.shrinked {
+    background-color: rgb(170, 32, 159);
+    transform: scale(0.5);
+}
+
