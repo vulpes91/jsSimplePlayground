@@ -1,8 +1,13 @@
 console.log("Омниссия, благослови этот код!");
 
 
-document.querySelector('.nav-icon-wrapper').addEventListener('click', function () {
-    document.querySelector('.nav-icon').classList.toggle('active');
+// document.querySelector('.nav-icon-wrapper').addEventListener('click', function () {
+//     document.querySelector('.nav-icon').classList.toggle('active');
+//     console.log("нажал на меню");
+// });
+
+document.querySelector('.nav-icon').addEventListener('click', function () {
+    this.classList.toggle('nav-icon--active');
     console.log("нажал на меню");
 });
 

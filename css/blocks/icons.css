@@ -1,0 +1,105 @@
+.container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.nav-icon__middle, .nav-icon__middle::after, .nav-icon__middle::before {
+  width: 30px;
+  height: 5px;
+}
+
+.nav-icon__middle {
+  background-color: #ce1b1b;
+  position: relative;
+}
+.nav-icon__middle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: #ce1b1b;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+}
+.nav-icon__middle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #ce1b1b;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+}
+
+/*active state */
+.nav-icon.nav-icon--active .nav-icon__middle {
+  background-color: transparent;
+}
+.nav-icon.nav-icon--active .nav-icon__middle::before, .nav-icon.nav-icon--active .nav-icon__middle::after {
+  transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  top: 0;
+  background-color: #dfd118;
+}
+.nav-icon.nav-icon--active .nav-icon__middle::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.nav-icon.nav-icon--active .nav-icon__middle::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.square-wrapper {
+  margin-right: 30px;
+}
+
+.square, .rotated, .circle {
+  width: 30px;
+  height: 30px;
+}
+
+.square {
+  background-color: #37c91a;
+  transition: .2s ease-in;
+}
+
+.rotated {
+  background-color: #0b6fe2;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #da8414;
+  transition: .2s ease-in;
+}
+
+.shrinked {
+  background-color: #aa209f;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+/*# sourceMappingURL=icons.css.map */
